@@ -22,10 +22,14 @@ export default function Header() {
       fixed="top"
       className="headerContainer position-sticky"
     >
-      <Container>
+      <Container className="headerWrapper">
         <Navbar.Brand href="#home">
           <img alt="Sample news feed logo" src="/logo.png" /> SAMPLE PAGE
         </Navbar.Brand>
+        <span class="squareLogo ms-2 me-lg-4 me-md-3 me-auto">
+          <span /> <span />
+          <span /> <span />
+        </span>
         <Navbar.Toggle
           onClick={toggleSizeMenu}
           aria-controls={`offcanvasNavbar-expand-md`}
@@ -54,6 +58,7 @@ export default function Header() {
               <NavDropdown
                 title="Features"
                 id={`offcanvasNavbarDropdown-expand-md`}
+                className="ms-lg-4"
               >
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
@@ -67,6 +72,7 @@ export default function Header() {
               <NavDropdown
                 title="More"
                 id={`offcanvasNavbarDropdown-expand-md`}
+                className="ms-lg-4"
               >
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
@@ -78,7 +84,7 @@ export default function Header() {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Col lg="5" md="3" className="mx-auto">
+            <Col md="4" className="mx-auto">
               <InputGroup className="rounded-2 p-2">
                 <Form.Control
                   className="searchInput"

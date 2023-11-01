@@ -1,9 +1,32 @@
+.mainParentWrapper,
+.mainBodyWrapper {
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
 .bodySubRow {
-  height: fit-content !important;
   max-width: 20% !important;
   row-gap: 0.5rem;
 }
 
 .bodySubSubRow {
   row-gap: 0.5rem;
+}
+
+.bodyPostRow,
+.bodySubRow {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 100% !important;
+  overflow: auto !important;
+}
+.bodyPostRow::-webkit-scrollbar,
+.bodySubRow::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .bodySubRow {
+    max-width: 30% !important;
+  }
 }

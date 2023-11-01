@@ -14,15 +14,7 @@
 .mainBodyCol {
   height: 100% !important;
   max-height: 100% !important;
-  overflow-y: auto !important;
-}
-
-.mainBodyCol {
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
-.mainBodyCol::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  overflow: hidden !important;
 }
 
 @media screen and (min-width: 768px) {

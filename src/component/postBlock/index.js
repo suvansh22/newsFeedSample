@@ -4,6 +4,7 @@ import "./index.css";
 import ProfilePic from "../profilePic";
 import { getUser } from "../../mock/userData";
 import { timeAgo } from "../../utility/timeAgo";
+import Verified from "../verified";
 
 const HEADER_GENERATOR = ({ type = "", value = {} }) => {
   if (!type) return "";
@@ -17,7 +18,16 @@ const HEADER_GENERATOR = ({ type = "", value = {} }) => {
 const BODY_GENERATOR = ({ type = "", value = "" }) => {
   const availableTemplate = {
     reply: <div className="mx-2">{value}</div>,
-    image: <img className="m-0 p-0" alt="SS" src={value} />,
+    image: (
+      <div className="p-0 m-0 d-flex flex-column">
+        {value?.link && (
+          <a className="mb-4 ms-4 fw-semibold" href={value.link}>
+            {value?.link}
+          </a>
+        )}
+        <img className="m-0 p-0" alt="SS" src={value?.imageUrl} />
+      </div>
+    ),
   };
   return availableTemplate[type];
 };
@@ -49,7 +59,9 @@ export default function PostBlock({
           </Col>
           <Col className="m-0 p-0 d-flex flex-column">
             <div>
-              <span className="fw-bolder">{userInfo.userName} </span>
+              <span className="fw-bolder me-2">
+                {userInfo.userName} {userInfo?.verified && <Verified />}
+              </span>
               <span className="px-2 pb-1 fw-semibold text-light rounded-pill memberTypeBlock">
                 Pro Member
               </span>{" "}

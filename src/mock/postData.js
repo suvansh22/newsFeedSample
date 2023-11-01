@@ -36,7 +36,10 @@ export const POST_DATA = [
     id: "c75b0477-8367-4a1f-aaef-7263dfa1d4e9",
     activityDate: new Date("10/22/2021"),
     activityAction: "image",
-    activityValue: "https://source.unsplash.com/random/200x100",
+    activityValue: {
+      link: "https://ww.twitch.tv/blizzard",
+      imageUrl: "https://source.unsplash.com/random/200x100",
+    },
     actionHeader: {},
     commentCount: 10,
     shareCount: 12,

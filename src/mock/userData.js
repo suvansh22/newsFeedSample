@@ -50,7 +50,7 @@ export const USER_DATA = [
     userHandle: "mrsmarina",
     level: 4,
     imageUrl: "https://robohash.org/laboriosamfacilisrem.png?size=50x50",
-    verified: false,
+    verified: true,
     type: "pro",
   },
 ];

@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { USER_DATA } from "../../mock/userData";
 import "./index.css";
 import ProfilePic from "../profilePic";
+import Verified from "../verified";
 
 export default function NewestMemberBlock() {
   return (
@@ -22,7 +23,9 @@ export default function NewestMemberBlock() {
               />
             </Col>
             <Col className="p-0 m-0 ms-2 d-flex flex-column">
-              <span className="fw-bold">{item.userName}</span>
+              <span className="fw-bold d-flex align-items-center">
+                {item.userName} {item?.verified && <Verified />}
+              </span>
               <span className="fw-light userHandle">@{item.userHandle}</span>
             </Col>
           </Row>

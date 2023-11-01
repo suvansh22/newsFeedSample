@@ -1,0 +1,12 @@
+.checkWrapper {
+  width: 20px !important;
+  height: 20px !important;
+  display: inline-block;
+}
+
+.checkWrapper span {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}

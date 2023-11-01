@@ -1,0 +1,33 @@
+.customSideBarContainer {
+  height: 80% !important;
+}
+
+.iconWrapper {
+  height: fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.iconWrapper:hover {
+  background-color: #25d9e5;
+}
+
+.active {
+  background-color: #25d9e5 !important;
+}
+
+.iconWrapper:hover svg {
+  fill: white;
+}
+
+@media screen and (max-width: 768px) {
+  .customSideBarContainer {
+    height: auto !important;
+    width: 100% !important;
+    flex-direction: row !important;
+  }
+  .iconWrapper svg {
+    width: 24px;
+    height: 24px;
+  }
+}

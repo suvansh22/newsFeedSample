@@ -1,0 +1,9 @@
+.bodySubRow {
+  height: fit-content !important;
+  max-width: 20% !important;
+  row-gap: 0.5rem;
+}
+
+.bodySubSubRow {
+  row-gap: 0.5rem;
+}

@@ -1,0 +1,34 @@
+.postHeaderBlock {
+  flex-wrap: nowrap;
+  column-gap: 15px;
+}
+
+.postFooterBlock {
+  border-top: 0.1px solid #b5b7ce;
+}
+
+.memberTypeBlock {
+  background-color: #5d5df5;
+}
+
+.dateStampBlock {
+  font-size: 0.75rem;
+  width: fit-content;
+}
+
+.postValueBlock {
+  overflow-x: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.postValueBlock img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 500px) {
+  .parentBlock {
+    font-size: 0.75rem;
+  }
+}

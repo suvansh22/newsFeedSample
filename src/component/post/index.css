@@ -1,0 +1,8 @@
+.bottomBorder {
+  border-bottom: 4px solid #01d1df !important;
+  height: 100% !important;
+}
+
+.fullWidth {
+  width: 100%;
+}
